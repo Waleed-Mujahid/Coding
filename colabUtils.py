@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import tensorflow as tf
-from PIL import image 
+from PIL import Image 
 
 def plotLoss(history, validation = False, height = 7, width = 4):
     plt.figure(figsize = (height,width))
