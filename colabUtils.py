@@ -37,7 +37,7 @@ def processImg(path,target_shape,show=False,grayscale=False ):
 
     # Converting the image so it can be fed into the model
     img = tf.io.read_file(path)
-    img = tf.image.decode_image(img)
+    img = tf.image.decode_image(img, channels = 3)
     test_img = tf.image.resize(img, size = target_shape)    # Resize the image according to the model
     if (grayscale):
         test_img = tf.image.rgb_to_grayscale(test_img)                     # Model expects a grayscale image
